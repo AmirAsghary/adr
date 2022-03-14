@@ -1,5 +1,5 @@
 # Title
-date (DD/MM/YYYY)
+{DATE}
 keywords (comma separated)
 jira issues (comma separated)
 
