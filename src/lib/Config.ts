@@ -10,7 +10,7 @@ let DEFAULT_CONFIG = {
   language: 'en',
   path: Utils.getWorkDir() + '/docs/adr/',
   prefix: '',
-  digits: 4
+  digits: 3
 }
 
 function getAllConfig (defaultValue: string) {
