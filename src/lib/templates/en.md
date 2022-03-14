@@ -1,19 +1,15 @@
-# {NUMBER}. {TITLE}
-
-Date: {DATE}
-
-## Status
-
-{DATE} proposed
-
-## Context
-
-Context here...
+# Title
+date (DD/MM/YYYY)
+keywords (comma separated)
+jira issues (comma separated)
 
 ## Decision
+In the context of <use case/user story u>,
+  facing <concern c>
+  we decided for <option o>
+  to achieve <quality q>,
+  accepting <downside d>,
+  because <reason r> (optional).
 
-Decision here...
-
-## Consequences
-
-Consequences here...
+## References
+Optional.
