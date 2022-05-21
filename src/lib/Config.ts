@@ -3,6 +3,7 @@ let LRU = require('lru-cache')
 let cache = new LRU({
   max: 500
 })
+let path = require('path')
 
 import Utils from './utils'
 
@@ -10,7 +11,8 @@ let DEFAULT_CONFIG = {
   language: 'en',
   path: Utils.getWorkDir() + '/docs/adr/',
   prefix: '',
-  digits: 3
+  digits: 3,
+  editor: 'code'
 }
 
 function getAllConfig (defaultValue: string) {
@@ -60,13 +62,28 @@ function getSavePath (): string {
   return getConfig('path')
 }
 
+function getCachePath (): string {
+  return path.resolve(getConfig('path'), './.cache')
+}
+
+function getAssetsPath (): string {
+  return path.resolve(getConfig('path'), './assets')
+}
+
+function getEditor (): string {
+  return getConfig('editor')
+}
+
 let Config = {
   getAllConfig: getAllConfig,
   getSavePath: getSavePath,
   getLanguage: getLanguage,
   getPrefix: getPrefix,
   getDigits: getDigits,
-  getConfig: getConfig
+  getEditor: getEditor,
+  getConfig: getConfig,
+  getAssetsPath: getAssetsPath,
+  getCachePath: getCachePath
 }
 
 export default Config
